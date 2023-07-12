@@ -6,3 +6,7 @@ if __name__ == '__main__':
             price = item["price"].replace("NBSP", "").replace("", "")
             item["price"] = price
 
+
+
+
+
