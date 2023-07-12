@@ -1,17 +1,23 @@
 import json
 if __name__ == '__main__':
 
-    with open("products.json", "r", encoding="utf-8") as file:
-         products = json.load(file)
+    # with open("products.json", "r", encoding="utf-8") as file:
+    #      products = json.load(file)
 
-    new_list_product = []
+
+    # for item in products:
+    #     for features in item['features']:
+    #         if features['value'] == "A++":
+    #             print(item['title'], features)
+
     for item in products:
-        print(item['value'])
+        with open(f"single_product/{item['id']}.json", "w", encoding="cp1251") as file:
+            json.dump(item, file)
 
-        for value in item['value']:
-            if value.lower() == "A++":
-                 new_list_product.append(item)
-
+        # id = 13
+        # with open(f"single_product/{id}.json", "r") as file:
+        #     product = json.load(file)
+        #     print(product)
 
 
 
