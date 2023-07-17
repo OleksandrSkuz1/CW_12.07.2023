@@ -1,23 +1,32 @@
 import json
 if __name__ == '__main__':
 
-    # with open("products.json", "r", encoding="utf-8") as file:
-    #      products = json.load(file)
+    with open("products.json", "r", encoding="utf-8") as file:
+         products = json.load(file)
 
-
+    # spysok = []
     # for item in products:
-    #     for features in item['features']:
-    #         if features['value'] == "A++":
-    #             print(item['title'], features)
+    #     spysok.append(item['title'])
+    #  print(spysok)
 
-    for item in products:
-        with open(f"single_product/{item['id']}.json", "w", encoding="cp1251") as file:
-            json.dump(item, file)
+    # products.sort(key=lambda x: x["title"])
+    # print(products)
 
-        # id = 13
-        # with open(f"single_product/{id}.json", "r") as file:
-        #     product = json.load(file)
-        #     print(product)
+    # products.sort(key=lambda product: product["price"])
+    # sorted_product = sorted(products, key=lambda product: product["price"], reveres=True)
+    # print(sorted_product)
+
+    with open("products.json", "w", encoding="utf-8") as file:
+         json.dumps(products, file)
+
+
+
+
+
+
+
+
+
 
 
 
